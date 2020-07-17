@@ -13,8 +13,8 @@ export default class App extends Component<Props> {
     return (
       <Home>
         <Header />
-        <Text>buscador</Text>
-        <Text>categorías</Text>
+        <Text>Buscador</Text>
+        <Text>Categorías</Text>
         <SuggestionList />
       </Home>
     );

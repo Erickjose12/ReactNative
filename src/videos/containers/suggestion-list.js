@@ -4,25 +4,21 @@ import {
   Text
 } from 'react-native';
 import Layout from '../components/suggestion-list-layout';
+import Empty from '../components/empty';
 
 class SuggestionList extends Component {
+  rederEmtpy = () => <Empty Text="No hay sugerencias"/>
   render() {
     const list = [
-      {
-        title: 'titulo',
-        key: '1'
-      },
-      {
-        title: 'otro titulo',
-        key: '2'
-      }
+          //Aqui irian los elementos de la lista
     ]
     return (
       <Layout
-        title="Recomendado para ti"
+        title="RECOMENDACIONES"
         >
         <FlatList
           data={list}
+          ListEmptyComponent= {this.rederEmtpy}
           renderItem={({ item }) => <Text>{item.title}</Text> }
         />
       </Layout>
